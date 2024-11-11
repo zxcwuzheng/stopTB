@@ -1,6 +1,15 @@
 # Advantages of updated WHO mutation catalogue combined with existing whole-genome sequencing-based methods in diagnosis of drug-resistant tuberculosis
 
-An ensemble model leveraging a stacking approach, integrated with the updated WHO catalog,TB profiler(v5.0.0), SAM-TB(v1), GenTB-RF(v1), and MD-CNN(v1), has been developed for the prediction of antibiotic resistance in Mycobacterium tuberculosis genomes.
+An ensemble model leveraging a stacking approach, integrated with the updated WHO catalog,TB profiler v5.0.0, SAM-TB v1, GenTB-RF v1, and MD-CNN v1.0, has been developed for the prediction of antibiotic resistance in Mycobacterium tuberculosis genomes.
+
+```
+- updated WHO catalog: https://www.who.int/publications/i/item/9789240028173
+- SAM-TB v1: https://samtb.uni-medica.com/index
+- TB profiler v5.0.0: https://github.com/jodyphelan/TBProfiler
+- GenTB v1: https://github.com/farhat-lab/gentb-snakemake
+- MD-CNN v1.0: https://github.com/aggreen/MTB-CNN/tree/main
+```
+
 
 ## requirments
 The model is trained using Python (v3.9.18) and scikit-learn package (v1.3.2)
