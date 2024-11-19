@@ -66,6 +66,8 @@ y = (pred > cutoff).astype('int')
 
 `validation.py`: external validation for trained model
 
+`WHO_catalog_dr.zip`: using WHO catalog (2023) to resistance prediction
+
 `input_daat`: raw input data
 
 `result`: output result files created by running the models on train and test set
