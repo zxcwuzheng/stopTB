@@ -38,7 +38,7 @@ ERR067581            1           1      1  1.000  0.980599
 
 ### Executing
 All the trained model in the `trained_model` subdirectories. 
-1. load the trained model using `pickle` module, e.g. RIF
+1. load the trained model using `pickle` module, e.g. predict RIF resistance
 ```
 import pickle
 model_path = 'trained_model/RIFAMPICIN_model.pkl'
@@ -48,7 +48,7 @@ with open(model_path, 'rb') as f:
 2. input data and prediction
 ```
 import pandas as pd
-X = pd.read_csv('input.csv')
+X = pd.read_csv('input_data/input.csv')
 y_proba = model.predict_proba(X)[:,1]
 ```
 3. get binary predictions based on best threshold
