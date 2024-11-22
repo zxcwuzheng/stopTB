@@ -31,7 +31,7 @@ def training(X, y, drug):
     # creat GridSearchCV object
     grid_search = GridSearchCV(clf, 
                                param_grid,
-                               cv=StratifiedKFold(n_splits=5,
+                               cv=StratifiedKFold(n_splits=10,
                                                   random_state=0,
                                                   shuffle=True),
                                n_jobs=2,
