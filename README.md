@@ -40,7 +40,7 @@ ERR067581            1           1      1  1.000  0.980599
 All the trained model in the `trained_model` subdirectories. 
 1. load the trained model using `pickle` module.
 ```
-with open(model_path, 'rb') as f:
+with open('trained_model/RIFAMPICIN.pkl', 'rb') as f:
     model = pickle.load(f)
 ```
 2. input data and prediction
@@ -51,8 +51,8 @@ y_pred = model.predict_proba(X)[:,1]
 3. get binary predictions based on best threshold
 ```
 model_cutoff = 'trained_model/RIFAMPICIN_cutoff.pkl'
-    with open(model_cutoff, 'rb') as f:
-        cutoff = pickle.load(f)
+with open(model_cutoff, 'rb') as f:
+    cutoff = pickle.load(f)
 y = (pred > cutoff).astype('int')
 ```
 
