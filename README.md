@@ -40,7 +40,7 @@ ERR067581            1           1      1  1.000  0.980599
 All the trained model in the `trained_model` subdirectories. 
 1. load the trained model using `pickle` module.
 ```
-with open('trained_model/RIFAMPICIN.pkl', 'rb') as f:
+with open('trained_model/RIFAMPICIN_model.pkl', 'rb') as f:
     model = pickle.load(f)
 ```
 2. input data and prediction
