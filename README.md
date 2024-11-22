@@ -24,17 +24,16 @@ Prior to executing our model, it is essential to have acquired the prediction fr
 - column3: SAM-TB binary predictions (0 represent drug susceptibility, 1 is drug resistance)
 - column4: GenTB numerical predictions (0~1, the probability of drug resistance)
 - column5: MD-CNN numerical predictions (0~1, the probability of drug resistance)
-- column6: pDST (0 represent drug susceptibility, 1 is drug resistance)
 
 For example:
 ```
-            WHO_catalog  TBprofiler  SAMTB  GenTB     MDCNN  pDST
+            WHO_catalog  TBprofiler  SAMTB  GenTB     MDCNN
                                                                
-ERR067576            1           1      1  1.000  0.957823     1
-ERR067577            1           1      1  1.000  0.970510     1
-ERR067578            1           1      1  1.000  0.957917     1
-ERR067580            0           0      0  0.000  0.140778     0
-ERR067581            1           1      1  1.000  0.980599     1
+ERR067576            1           1      1  1.000  0.957823
+ERR067577            1           1      1  1.000  0.970510
+ERR067578            1           1      1  1.000  0.957917
+ERR067580            0           0      0  0.000  0.140778
+ERR067581            1           1      1  1.000  0.980599
 ```
 
 ### Executing
@@ -68,11 +67,11 @@ y = (pred > cutoff).astype('int')
 
 `WHO_catalog_dr.zip`: using WHO catalog (2023) to predict resistance
 
-`input_daat`: raw input data
+`input_daat`: raw input data used in this study
 
 `result`: output result files created by running the models on train and test set
 
-`trained_model`: contain trained model for 10 drugs
+`trained_model`: contain trained models for 10 drugs
 
 `external_validation`: output result files created by running the models on external set
 
