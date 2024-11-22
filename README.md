@@ -38,22 +38,25 @@ ERR067581            1           1      1  1.000  0.980599
 
 ### Executing
 All the trained model in the `trained_model` subdirectories. 
-1. load the trained model using `pickle` module.
+1. load the trained model using `pickle` module, e.g. RIF
 ```
-with open('trained_model/RIFAMPICIN_model.pkl', 'rb') as f:
+import pickle
+model_path = 'trained_model/RIFAMPICIN_model.pkl'
+with open(model_path, 'rb') as f:
     model = pickle.load(f)
 ```
 2. input data and prediction
 ```
-X = pd.read_csv(input.csv)
-y_pred = model.predict_proba(X)[:,1]
+import pandas as pd
+X = pd.read_csv('input.csv')
+y_proba = model.predict_proba(X)[:,1]
 ```
 3. get binary predictions based on best threshold
 ```
-model_cutoff = 'trained_model/RIFAMPICIN_cutoff.pkl'
-with open(model_cutoff, 'rb') as f:
+cutoff_path = 'trained_model/RIFAMPICIN_cutoff.pkl'
+with open(cutoff_path, 'rb') as f:
     cutoff = pickle.load(f)
-y = (pred > cutoff).astype('int')
+y_binary = (y_proba > cutoff).astype('int')
 ```
 
 ## List of files and directories
